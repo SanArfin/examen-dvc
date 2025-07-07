@@ -5,3 +5,13 @@ stages:
     - src/data/download_data.py
     outs:
     - data/raw_data/raw.csv
+  split:
+    cmd: python src/data/split_data.py
+    deps:
+    - data/raw_data/raw.csv
+    - src/data/split_data.py
+    outs:
+    - data/processed_data/X_test.csv
+    - data/processed_data/X_train.csv
+    - data/processed_data/y_test.csv
+    - data/processed_data/y_train.csv
