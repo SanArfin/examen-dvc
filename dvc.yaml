@@ -26,7 +26,7 @@ stages:
     - data/processed_data/X_train_scaled.csv
     - models/scaler.pkl
   train_model:
-    cmd: python src/models/search_model.py
+    cmd: ./run_train.sh
     deps:
     - data/processed_data/X_train_scaled.csv
     - data/processed_data/y_train.csv
