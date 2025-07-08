@@ -43,3 +43,5 @@ stages:
     metrics:
     - metrics/scores.json:
         cache: false
+    outs:
+    - data/predictions.csv
